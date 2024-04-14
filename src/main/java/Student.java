@@ -13,7 +13,7 @@ public class Student {
     }
     public Student() {
         this.index = "Unknown";
-    };
+    }
 
     public void setImie(String n) {
         this.imie = n;
