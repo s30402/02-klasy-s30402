@@ -20,7 +20,7 @@ public class Card {
         for (Colors c : Colors.values()) {
             if (c.name().equals(color)) {
                 this.color = color;
-                break;
+                return;
             }
         }
 
