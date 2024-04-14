@@ -9,13 +9,23 @@ import static org.junit.Assert.assertThrows;
 public class StudentTest {
 
     @Test
-    public void testAddObecnosc() {
+    public void testAddObecnoscInt() {
         Student s1 = new Student();
 
         s1.setImie("Dariusz"); s1.setNazwisko("Brown"); s1.setIndex("s1");
         s1.setObecnosc(15); s1.setOcena(4);
 
         assertEquals("0.15", 0.15, s1.getObecnosc(), 0.001);
+    }
+
+    @Test
+    public void testAddObecnoscPercentage() {
+        Student s1 = new Student();
+
+        s1.setImie("Dariusz"); s1.setNazwisko("Brown"); s1.setIndex("s1");
+        s1.setObecnosc(0.71);
+
+        assertEquals(0.71, s1.getObecnosc(), 0.001);
     }
 
     @Test
@@ -41,8 +51,17 @@ public class StudentTest {
     public void testAddOcena() {
         Student s1 = new Student();
 
-        s1.setImie("Dariusz"); s1.setNazwisko("Brown"); s1.setIndex("s1");
+        s1.setImie("Dariusz"); s1.setNazwisko("Brown");
         s1.setObecnosc(15); s1.setOcena(4);
+
+        assertEquals(2, s1.getOcena());
+    }
+
+    @Test
+    public void testAddOcenaErrorType() {
+        Student s1 = new Student("s30402");
+
+        s1.setOcena(1);
 
         assertEquals(2, s1.getOcena());
     }

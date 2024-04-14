@@ -8,6 +8,13 @@ public class Student {
 
     private double obecnosc;
 
+    public Student(String s) {
+        this.index = s;
+    }
+    public Student() {
+        this.index = "Unknown";
+    };
+
     public void setImie(String n) {
         this.imie = n;
     }
@@ -36,8 +43,9 @@ public class Student {
                 this.ocena = n;
             }
         } catch (Exception e) {
-            System.out.println("Oceny mają wartości od 2 do 5.");
+            System.out.println("\nOceny mają wartości od 2 do 5.");
             this.ocena = 2;
+            System.out.println("Ocena studenta " + this.index + " została zmieniona na " + this.ocena);
         }
     }
 
