@@ -1,11 +1,10 @@
 package src.test.java;
 
 import org.junit.*;
-import src.main.java.Card;
 import src.main.java.Student;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThrows;
+
 public class StudentTest {
 
     @Test
