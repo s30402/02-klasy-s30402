@@ -41,9 +41,7 @@ public class Invoice {
 
     public double Amount() {
 
-        if (pricePerItem < 0) {
-            return 0;
-        } else if (quantity < 0) {
+        if (pricePerItem <= 0 || quantity <= 0) {
             return 0;
         } else {
             return pricePerItem * quantity;
