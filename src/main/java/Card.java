@@ -33,10 +33,16 @@ public class Card {
 
     public int WarResult(Card card) {
 
-        if(this.getValue() > card.getValue()) {
-            return 1;
-        } else if (this.getValue() == card.getValue()) {
+        if (this.getValue() == card.getValue()) {
             return 0;
+
+        } else if(this.getValue() == 1) {
+            return 1;
+        } else if (card.getValue() == 1) {
+            return 2;
+
+        } else if(this.getValue() > card.getValue()) {
+            return 1;
         } else {
             return 2;
         }

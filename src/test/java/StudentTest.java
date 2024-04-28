@@ -51,7 +51,7 @@ public class StudentTest {
         Student s1 = new Student();
 
         s1.setImie("Dariusz"); s1.setNazwisko("Brown");
-        s1.setObecnosc(15); s1.setOcena(4);
+        s1.setObecnosc(49); s1.setOcena(4);
 
         assertEquals(2, s1.getOcena());
     }

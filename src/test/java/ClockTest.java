@@ -27,6 +27,12 @@ public class ClockTest {
         }
 
         assertEquals("[00:02:00]", clock.tick() );
+
+        for (int i = 0; i< 359; i++) {
+            clock.tick();
+        }
+
+        assertEquals("[00:08:00]", clock.tick() );
     }
 
     @Test

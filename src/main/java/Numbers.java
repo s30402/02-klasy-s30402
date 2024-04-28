@@ -2,7 +2,7 @@ package src.main.java;
 
 public class Numbers {
 
-    private int A,B,C;
+    private final int A,B,C;
 
     public Numbers(int A, int B, int C) {
         this.A = A;

@@ -49,7 +49,14 @@ public class MyDate {
     }
 
     public String displayDate() {
-        return day + "/" + month + "/" + year;
+
+         String dd, mm, yyyy;
+
+        if (day < 10) { dd = "0" + day; } else dd = String.valueOf(day);
+        if (month < 10) { mm = "0" + month; } else mm = String.valueOf(month);
+        if (year == 0) { yyyy = "0000";} else yyyy = String.valueOf(year);
+
+        return dd + "/" + mm + "/" + yyyy;
     }
 
 }

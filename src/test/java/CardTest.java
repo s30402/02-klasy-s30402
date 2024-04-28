@@ -12,7 +12,7 @@ public class CardTest {
     public void testSetValue() {
         Card card = new Card();
         card.setValue(5);
-        assertEquals("XYZ", 5, card.getValue());
+        assertEquals("5", 5, card.getValue());
     }
 
     @Test
@@ -36,6 +36,14 @@ public class CardTest {
         Card card2 = new Card();
         card2.setValue(10);
 
-        assertEquals("Card 1 vs Card 2", 2, card.WarResult(card2));
+        assertEquals("Card 1 (Ass)", 1, card.WarResult(card2));
+
+        card.setValue(5);
+        assertEquals("Card 2", 2, card.WarResult(card2));
+
+        card.setValue(7);
+        card2.setValue(7);
+        assertEquals("Same", 0, card.WarResult(card2));
     }
+
 }
