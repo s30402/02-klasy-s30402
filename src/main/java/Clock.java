@@ -115,6 +115,32 @@ public class Clock {
 
     }
 
+    public String tickDown() {
+
+        if (seconds != 0) {
+            seconds--;
+        } else {
+
+            if (minutes !=0) {
+                minutes--;
+            } else {
+
+                if (hours != 0) {
+                    hours--;
+                } else {
+                    hours = 23;
+                }
+
+                minutes = 59;
+            }
+
+            seconds = 59;
+        }
+
+        return toString();
+
+    }
+
     public String toString() {
 
         String hh,mm, ss;
